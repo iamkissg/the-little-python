@@ -62,6 +62,8 @@ def cleanInput(input):
 def getNgrams(input, n):
     input = cleanInput(input)  # 数据清洗
     output = dict()  # 创建字典, 用于保存n元 组
+    # 可以通过filter函数过滤掉常用词汇
+    # noCommonWord = filter(lambda t: not isCommon(t), input)
     for i in range(len(input) - n + 1):
         if isCommon(input[i:i+n]):  # 过滤常用词汇
             continue
