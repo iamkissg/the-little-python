@@ -13,7 +13,9 @@ while 1:
     rw = RandomWalk()
     rw.fill_walk()
 
-    plt.scatter(rw.x_values, rw.y_values)
+    point_numers = list(range(rw.num_points))
+    plt.scatter(rw.x_values, rw.y_values, c=point_numers,
+                cmap=plt.cm.Reds, edgecolor="none", s=15)
     # the program will stop at thi point
     plt.show()
 
