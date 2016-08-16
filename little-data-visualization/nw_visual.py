@@ -16,6 +16,9 @@ while 1:
     point_numers = list(range(rw.num_points))
     plt.scatter(rw.x_values, rw.y_values, c=point_numers,
                 cmap=plt.cm.Reds, edgecolor="none", s=15)
+    plt.scatter(0, 0, c="blue", edgecolor="none", s=100)
+    plt.scatter(rw.x_values[-1], rw.y_values[-1],
+                c="green", edgecolor="none", s=100)
     # the program will stop at thi point
     plt.show()
 
