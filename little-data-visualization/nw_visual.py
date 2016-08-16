@@ -6,11 +6,17 @@
 __author__ = 'Engine'
 
 
+import random_walk
+import random_walk_long_distance
+import random_walk_just_turn_right
+from random import choice
 from matplotlib import pyplot as plt
-from random_walk import RandomWalk
 
 while 1:
-    rw = RandomWalk(50000)
+    RandomWalk = choice([random_walk.RandomWalk,
+                         random_walk_long_distance.RandomWalk,
+                         random_walk_just_turn_right.RandomWalk])
+    rw = random_walk_long_distance.RandomWalk(50000)
     rw.fill_walk()
 
     plt.figure(figsize=(10, 6), dpi=160)
